@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  mozsc:
+    build: ./app
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app_data:/app/data
+    environment:
+      - PORT=3000
+      - FLAG=CE441{test-flag}
+      - ADMIN_TOKEN=uzhG5NSCSephhlfTd-TncCAURpPi303tJsMs6xRpiDU
+
+  admin_bot:
+    build: ./admin
+    environment:
+      - ADMIN_TOKEN=uzhG5NSCSephhlfTd-TncCAURpPi303tJsMs6xRpiDU
+      - MOZSC_URL=http://mozsc:3000
+    

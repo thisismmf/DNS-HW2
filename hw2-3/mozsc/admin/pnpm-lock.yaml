@@ -1,0 +1,84 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      modernlog:
+        specifier: ^1.1.0
+        version: 1.1.0
+      playwright:
+        specifier: ^1.49.0
+        version: 1.49.0
+    devDependencies:
+      '@types/node':
+        specifier: ^22.8.6
+        version: 22.8.6
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
+
+packages:
+
+  '@types/node@22.8.6':
+    resolution: {integrity: sha512-tosuJYKrIqjQIlVCM4PEGxOmyg3FCPa/fViuJChnGeEIhjA46oy8FMVoF9su1/v8PNs2a8Q0iFNyOx0uOF91nw==}
+
+  fsevents@2.3.2:
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
+    os: [darwin]
+
+  modernlog@1.1.0:
+    resolution: {integrity: sha512-dTn6fn2PjO7HGwdt0aXOvaRZO6sK2N0hyNwdZTASxg9fw+iB654Ucy9Tfp6A76wipAVrM1wcwJNWaRPMgSAPLQ==}
+
+  playwright-core@1.49.0:
+    resolution: {integrity: sha512-R+3KKTQF3npy5GTiKH/T+kdhoJfJojjHESR1YEWhYuEKRVfVaxH3+4+GvXE5xyCngCxhxnykk0Vlah9v8fs3jA==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  playwright@1.49.0:
+    resolution: {integrity: sha512-eKpmys0UFDnfNb3vfsf8Vx2LEOtflgRebl0Im2eQQnYMA4Aqd+Zw8bEOB+7ZKvN76901mRnqdsiOGKxzVTbi7A==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+  spitroast@1.4.4:
+    resolution: {integrity: sha512-S69rzIFjbGoEW5YCLpm1kEdqMEYqC09lmE1ZMY4gyUXfke0wi9qZjKYa0DDSv5eIy/D+/UGJT8yxgJddU3oqlA==}
+
+  typescript@5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
+snapshots:
+
+  '@types/node@22.8.6':
+    dependencies:
+      undici-types: 6.19.8
+
+  fsevents@2.3.2:
+    optional: true
+
+  modernlog@1.1.0:
+    dependencies:
+      spitroast: 1.4.4
+
+  playwright-core@1.49.0: {}
+
+  playwright@1.49.0:
+    dependencies:
+      playwright-core: 1.49.0
+    optionalDependencies:
+      fsevents: 2.3.2
+
+  spitroast@1.4.4: {}
+
+  typescript@5.6.3: {}
+
+  undici-types@6.19.8: {}

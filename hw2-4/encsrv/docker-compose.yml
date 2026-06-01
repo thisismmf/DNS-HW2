@@ -1,0 +1,6 @@
+services:
+  encryption_srv:
+    build: ./app
+    ports:
+      - "1204:5000"
+

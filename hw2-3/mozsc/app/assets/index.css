@@ -1,0 +1,102 @@
+@font-face {
+    font-family: FunnelSans;
+    src: url(./Funnel_Sans/FunnelSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --primary-color: #D54B38
+}
+
+body {
+    font-family: FunnelSans, sans-serif;
+    max-width: 66em;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin: auto;
+    background-color: #EAE7DC;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
+    color: var(--primary-color);
+    font-family: FunnelSans, sans-serif;
+}
+
+.margin-top {
+    margin-top: 16px
+}
+.margin-bottom {
+    margin-bottom: 16px;
+}
+
+.title {
+    text-align: center;
+}
+
+/* new post*/
+.new-post {
+    border: 1px solid var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.new-post label, .new-post button {
+    margin-top: 16px;
+}
+
+.new-post .checkbox-container {
+    margin-top: 16px;
+}
+
+
+.posts {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post {
+    border: 1px solid var(--primary-color);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.post pre {
+    white-space: pre-wrap;
+    word-wrap: anywhere;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+p {
+    margin: 0
+}
+
+.flex {
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+.flex.flex-row {
+    display: flex;
+    width: 100%;
+}
+.flex .flex-1 {
+    flex: 1;
+}
+
+.chip {
+    padding: 4px;
+    border-radius: 4px;
+}
+.chip-red {
+    border: 1px solid rgb(211, 47, 47);
+    background-color: rgb(253, 237, 237);
+    color: rgb(95, 33, 32);
+}

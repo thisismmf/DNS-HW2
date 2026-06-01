@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mozsc</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h1 class="title">
+        #<%= post.id %> <%= post.title %>
+    </h1>
+    <div class="flex flex-row margin-bottom">
+        <div class="flex-1"></div>
+        <p>Logged in as <%- session.username %></p>
+        <% if (session.is_admin) { %>
+            <div class="chip chip-red">ADMIN</div>
+        <% } %>
+    </div>
+
+    <div id="post-<%- post.id %>" class="post">
+        <%- body %>
+
+        <h5>
+            Author: <%- post.author %>, Date: <%= new TZDate(post.created_at, timezone).toLocaleString("fr-CH") %>
+        </h5>
+
+        <form action="/posts/<%- post.id %>/report" method="post">
+            <button type="submit">Report post</button>
+        </form>
+    </div>
+</body>
+</html>
